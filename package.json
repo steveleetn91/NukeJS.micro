@@ -1,0 +1,52 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveleetn91/NukeJS.micro.git"
+  },
+  "keywords": [
+    "stevelee",
+    "nukejs",
+    "nukejs",
+    "micro",
+    "vn",
+    "native",
+    "framework"
+  ],
+  "author": "stevelee",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/steveleetn91/NukeJS.micro/issues"
+  },
+  "homepage": "https://github.com/steveleetn91/NukeJS.micro#readme",
+  "dependencies": {
+    "nukejs-loader": "^1.0.26",
+    "webpack": "^5.76.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@webpack-cli/generators": "^3.0.1",
+    "babel-loader": "^9.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.12.0",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "pages": {
+    "index" : "./src/index.nuk.js",
+    "index/index2" : "./src/index/index2.nuk.js"
+  }
+}
