@@ -80,7 +80,8 @@ module.exports = () => {
             filename: `${key}.html`,
             inject : true,
             chunks :  "all",
-            excludeChunks: excludeChunks
+            excludeChunks: excludeChunks,
+            publicPath : '/'
         }));
     });
 
