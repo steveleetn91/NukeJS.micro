@@ -17,7 +17,7 @@ This is document to use NukeJS Micro
 
 - Rules:
     - To start a Nuke page you need use like this:
-        ![image description](document/page.JPG)
+        ![image description](page.JPG)
     - To print any things:
         - You need type ` Nuk{yourVariable/yourFunction/yourComponent}`
         - Example include component:
