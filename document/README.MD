@@ -17,19 +17,21 @@ This is document to use NukeJS Micro
 
 - Rules:
     - To start a Nuke page you need use like this:
-        `$NukPage = {
-            status : {
-            },
-            beforeRender : () => {
-                // will call before render step 
-            },
-            afterRender : () => {
-                // will call after render step 
-            },
-            render: () => {
-                return <NukApp></NukApp>
-            } 
-        }`
+        <code>
+            $NukPage = {
+                status : {
+                },
+                beforeRender : () => {
+                    // will call before render step 
+                },
+                afterRender : () => {
+                    // will call after render step 
+                },
+                render: () => {
+                    return <NukApp></NukApp>
+                } 
+            }
+        </code>
     - To print any things:
         - You need type ` Nuk{yourVariable/yourFunction/yourComponent}`
         - Example include component:
