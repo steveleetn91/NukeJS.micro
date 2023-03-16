@@ -17,25 +17,14 @@ This is document to use NukeJS Micro
 
 - Rules:
     - To start a Nuke page you need use like this:
-        <code>
-            $NukPage = {
-                status : {
-                },
-                beforeRender : () => {
-                    // will call before render step 
-                },
-                afterRender : () => {
-                    // will call after render step 
-                },
-                render: () => {
-                    return <NukApp></NukApp>
-                } 
-            }
-        </code>
+        ![image description](document/page.JPG)
     - To print any things:
         - You need type ` Nuk{yourVariable/yourFunction/yourComponent}`
         - Example include component:
             - ` Nuk{TestComponent(<Box></Box>)} `
+
+- Lifecycle 
+    - Waiting for update
 
 - Pages:
     - To config pages you need modifine at `package.json` in key `pages` 
@@ -52,3 +41,7 @@ This is document to use NukeJS Micro
         - to import image file you need type `require('./your-image.png')`;
 
 
+- Manage status
+    - To update and render page again use `Nuke.setStatus(key,value)`.
+    - render only at a row, a div or a component use: `Nuke.ComponentRender(root_id,NukeElement)`. Mean is only render at element has that id.
+    - Remember: Don't forget define your status before `setStatus` and `ComponentRender` 
