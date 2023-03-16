@@ -43,5 +43,5 @@ This is document to use NukeJS Micro
 
 - Manage status
     - To update and render page again use `Nuke.setStatus(key,value)`.
-    - render only at a row, a div or a component use: `Nuke.ComponentRender(root_id,NukeElement)`. Mean is only render at element has that id.
+    - render only at a div or a component use: `Nuke.ComponentRender(root_id,NukeElement)`. Mean is only render at element has that id.
     - Remember: Don't forget define your status before `setStatus` and `ComponentRender` 
