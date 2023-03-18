@@ -1,7 +1,8 @@
-import TestComponent from "./components/TestComponent.nuk";
+import TESTCOMPONENT from "./components/TestComponent.nuk";
 import "../assets/global.scss";
-import HeaderComponent from "./components/HeaderComponent.nuk";
-import { FanpageComponent } from "./components/FanpageComponent.nuk";
+import HEADERCOMPONENT from "./components/HeaderComponent.nuk";
+import { FANPAGECOMPONENT } from "./components/FanpageComponent.nuk";
+import POINTCOMPONENT from "./components/POINTCOMPONENT.nuk";
 $NukPage = {
     status : {
         active : true,
@@ -19,32 +20,28 @@ $NukPage = {
         $NukPage.status.active = $NukPage.status.active === true ? false : true;
         Nuke.setStatus('count',$NukPage.status.count);
     },
-    pointComponent(data){
-        return <NukApp>
-            <div>Nuk{data}</div>
-        </NukApp>
-    },
     render: () => {
-        let _f = $NukPage.pointComponent(<Box>
-            <span style="color:red">Nuk{$NukPage.status.count
-            >= 10 ? $NukPage.status.count : '0'+$NukPage.status.count}</span>    
-        </Box>);
         return <NukApp>
             <div class="container">
-                Nuk{HeaderComponent(<Box>
+                <HEADERCOMPONENT>
                     <span>NukeJS Version Micro</span>
-                </Box>)}
+                </HEADERCOMPONENT>
                 <div class="content-box">
                     <div id="pointComponent-text" 
-                    class="pointComponent-text">Nuk{_f}</div>
+                    class="pointComponent-text">
+                        <POINTCOMPONENT>
+                            <span style="color:red">Nuk{$NukPage.status.count
+                            >= 10 ? $NukPage.status.count : '0'+$NukPage.status.count}</span>
+                        </POINTCOMPONENT>
+                    </div>
                     <button click="$NukPage.submit()">+ 1 Point</button>
-                    <div class="test-component">Nuk{TestComponent(<Box>
-                        Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code>
-                    </Box>)}</div>
+                    <div class="test-component"><TESTCOMPONENT>
+                        <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
+                        </TESTCOMPONENT></div>
                     <hr/>
-                    Nuk{FanpageComponent(<Box>
-                        Like fanpage to get new information
-                    </Box>)}
+                    <FANPAGECOMPONENT>
+                        <span>Like fanpage to get new information</span>
+                    </FANPAGECOMPONENT>
                     <hr/>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-export function FanpageComponent(data){
+export function FANPAGECOMPONENT(data){
     return <NukApp>
         <div class="">
             <p><span><b>Fanpage: </b></span>

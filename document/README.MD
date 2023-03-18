@@ -19,9 +19,10 @@ This is document to use NukeJS Micro
     - To start a Nuke page you need use like this:
         ![image description](page.JPG)
     - To print any things:
-        - You need type ` Nuk{yourVariable/yourFunction/yourComponent}`
-        - Example include component:
-            - ` Nuk{TestComponent(<Box></Box>)} `
+        - You need type ` Nuk{yourVariable}`
+        - To include an compoent you need create new a component with name is uppercase letter. Example include component:
+            - ` <EXAMPLECOMPONENT> <span>Hello </span> Nuk{yourVariable} </EXAMPLECOMPONENT> `
+    - Again I remember to you component name always will be uppercase letter. And don't use any `functions` on `<NukApp>`, it's only component. So If I need call API before load UI for component? How we do it? Very easy, you have seen you compoent function our have a space before return `<NukApp>`. Do a something in that. Of course if has any events in compoent you can use `ComponentRender` to rerender again for that component.
 
 - Lifecycle 
     - Waiting for update

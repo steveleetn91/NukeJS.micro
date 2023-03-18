@@ -32,7 +32,7 @@
   "homepage": "https://github.com/steveleetn91/NukeJS.micro#readme",
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "nukejs-loader": "^1.0.26"
+    "nukejs-loader": "^1.0.29"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
