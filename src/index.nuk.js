@@ -2,7 +2,7 @@ import TESTCOMPONENT from "./components/TestComponent.nuk";
 import "../assets/global.scss";
 import HEADERCOMPONENT from "./components/HeaderComponent.nuk";
 import { FANPAGECOMPONENT } from "./components/FanpageComponent.nuk";
-import POINTCOMPONENT from "./components/POINTCOMPONENT.nuk";
+import POINTCOMPONENT from "./components/PointComponent.nuk";
 $NukPage = {
     status : {
         count: 0
@@ -15,9 +15,7 @@ $NukPage = {
     },
     submit(){
         $NukPage.status.count = Number($NukPage.status.count);
-        $NukPage.status.count++;
-        $NukPage.status.active = $NukPage.status.active === true ? false : true;
-        Nuke.setStatus('count',$NukPage.status.count);
+        Nuke.setStatus('count',$NukPage.status.count++);
     },
     render: () => {
         return <NukApp>
