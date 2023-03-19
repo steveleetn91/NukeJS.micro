@@ -2,21 +2,37 @@ import TESTCOMPONENT from "../components/TestComponent.nuk";
 import "../../assets/global.scss";
 import HEADERCOMPONENT from "../components/HeaderComponent.nuk";
 import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
-import POINTCOMPONENT from "../components/POINTCOMPONENT.nuk";
+import POINTCOMPONENT from "../components/PointComponent.nuk";
 $NukPage = {
     status : {
-        count: 0
+        count: 0,
+        isSubmit: false
     },
     beforeRender : () => {
 
     },
     afterRender : () => {
- 
+
     },
     submit(){
+        // if(this.isSubmit === true) {
+        //     return;
+        // }
+        // this.isSubmit = true;
         $NukPage.status.count = Number($NukPage.status.count);
-        $NukPage.status.active = $NukPage.status.active === true ? false : true;
-        Nuke.setStatus('count',$NukPage.status.count++);
+        $NukPage.status.count++;
+        // this will render page again
+        Nuke.setStatus('count',$NukPage.status.count);
+        // this's only render at element has id register
+        Nuke.ComponentRender('test-test-cpn',<NukApp>
+            <div style="color:green">
+                This component only load while you has been submited, and no rerender page
+            </div>
+        </NukApp>);
+        // setTimeout(() => {
+        //     Nuke.ComponentRender('test-test-cpn',<NukApp></NukApp>);
+        //     this.isSubmit = false;
+        // }, 3000);
     },
     render: () => {
         return <NukApp>
@@ -41,6 +57,7 @@ $NukPage = {
                         <span>Like fanpage to get new information</span>
                     </FANPAGECOMPONENT>
                     <hr/>
+                    <div id="test-test-cpn"></div>
                 </div>
             </div>
         </NukApp>
