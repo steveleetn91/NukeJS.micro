@@ -33,7 +33,7 @@ $NukPage = {
                         </POINTCOMPONENT>
                     </div>
                     <button click="$NukPage.submit()">+ 1 Point</button>
-                    <div class="test-component"><TESTCOMPONENT>
+                    <div class="test-component"><TESTCOMPONENT params="$NukPage.status">
                         <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
                         </TESTCOMPONENT></div>
                     <hr/>
