@@ -3,6 +3,7 @@ import "../assets/global.scss";
 import HEADERCOMPONENT from "./components/HeaderComponent.nuk";
 import { FANPAGECOMPONENT } from "./components/FanpageComponent.nuk";
 import POINTCOMPONENT from "./components/PointComponent.nuk";
+import BUTTONCOMPONENT from "./components/ButtonComponent.nuk"
 $NukPage = {
     status : {
         count: 0,
@@ -48,7 +49,7 @@ $NukPage = {
                             >= 10 ? $NukPage.status.count : '0'+$NukPage.status.count}</span>
                         </POINTCOMPONENT>
                     </div>
-                    <button click="$NukPage.submit()">+ 1 Point</button>
+                    <BUTTONCOMPONENT params="$NukPage.submit">+ 1 Point</BUTTONCOMPONENT>
                     <div class="test-component"><TESTCOMPONENT params="$NukPage.status">
                         <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
                         </TESTCOMPONENT></div>

@@ -25,6 +25,7 @@ This is document to use NukeJS Micro
     - Again I remember to you component name always will be uppercase letter. And don't use any `functions` on `<NukApp>`, it's only component. So If I need call API before load UI for component? How we do it? Very easy, you have seen you compoent function our have a space before return `<NukApp>`. Do a something in that. Of course if has any events in compoent you can use `ComponentRender` to rerender again for that component.
     - In case you need use data for component, so let's try use ` params="$NukPage.status" `. Example: `<EXAMPLECOMPONENT params="$NukPage.status"> Your point Nuk{componentParam.point} </EXAMPLECOMPONENT>`:
         ![image description](cpn.JPG)
+    - In NukeJS version micro our need use a function support for action callback on components: `Nuke.registerCallback(key,callback)`. In this case text of param Key will automatic uppercase letter. Let's consider in `ButtonComponent` of example source code.
 - Lifecycle 
     - Waiting for update
 

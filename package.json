@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "nukejs.micro",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "NukeJS framework",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,7 +32,7 @@
   "homepage": "https://github.com/steveleetn91/NukeJS.micro#readme",
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "nukejs-loader": "^1.0.29"
+    "nukejs-loader": "^1.0.32"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
