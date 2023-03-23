@@ -1,20 +1,21 @@
 import TESTCOMPONENT from "../components/TestComponent.nuk";
 import "../../assets/global.scss";
-import HEADERCOMPONENT from "../components/HeaderComponent.nuk";
 import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
+import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
+import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
 $NukPage = {
-    status : {
+    status: {
         count: 0,
         isSubmit: false
     },
-    beforeRender : () => {
+    beforeRender: () => {
 
     },
-    afterRender : () => {
+    afterRender: () => {
 
     },
-    submit(){
+    submit() {
         // if(this.isSubmit === true) {
         //     return;
         // }
@@ -22,9 +23,9 @@ $NukPage = {
         $NukPage.status.count = Number($NukPage.status.count);
         $NukPage.status.count++;
         // this will render page again
-        Nuke.setStatus('count',$NukPage.status.count);
+        Nuke.setStatus('count', $NukPage.status.count);
         // this's only render at element has id register
-        Nuke.ComponentRender('test-test-cpn',<NukApp>
+        Nuke.ComponentRender('test-test-cpn', <NukApp>
             <div style="color:green">
                 This component only load while you has been submited, and no rerender page
             </div>
@@ -36,30 +37,25 @@ $NukPage = {
     },
     render: () => {
         return <NukApp>
-            <div class="container">
-                <HEADERCOMPONENT>
-                    <span>NukeJS Version Micro</span>
-                </HEADERCOMPONENT>
-                <div class="content-box">
-                    <div id="pointComponent-text" 
+            <DEFAULTLAYOUT>
+                <div id="pointComponent-text"
                     class="pointComponent-text">
-                        <POINTCOMPONENT>
-                            <span style="color:red">Nuk{$NukPage.status.count
-                            >= 10 ? $NukPage.status.count : '0'+$NukPage.status.count}</span>
-                        </POINTCOMPONENT>
-                    </div>
-                    <button click="$NukPage.submit()">+ 1 Point</button>
-                    <div class="test-component"><TESTCOMPONENT params="$NukPage.status">
-                        <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
-                        </TESTCOMPONENT></div>
-                    <hr/>
-                    <FANPAGECOMPONENT>
-                        <span>Like fanpage to get new information</span>
-                    </FANPAGECOMPONENT>
-                    <hr/>
-                    <div id="test-test-cpn"></div>
+                    <POINTCOMPONENT>
+                        <span style="color:red">Nuk{$NukPage.status.count
+                            >= 10 ? $NukPage.status.count : '0' + $NukPage.status.count}</span>
+                    </POINTCOMPONENT>
                 </div>
-            </div>
+                <BUTTONCOMPONENT params="$NukPage.submit">+ 1 Point</BUTTONCOMPONENT>
+                <div class="test-component"><TESTCOMPONENT params="$NukPage.status">
+                    <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
+                </TESTCOMPONENT></div>
+                <hr />
+                <FANPAGECOMPONENT>
+                    <span>Like fanpage to get new information</span>
+                </FANPAGECOMPONENT>
+                <hr />
+                <div id="test-test-cpn"></div>
+            </DEFAULTLAYOUT>
         </NukApp>
-    } 
+    }
 }
