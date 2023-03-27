@@ -1,11 +1,6 @@
 # 🚀 Welcome to NUKEJS - VERSION MICRO!
 
-NukeJS version micro is framework run in Javascript and currently only support for web. 
-
--   Supports build 
-    + Single Page
-    + Multi page application
-    + Easy implment for framework MVC as : Laravel, Spring Boot, CakePHP, ExpressJS ...etc
+This is document to use NukeJS Micro
 
 ## How to install? 
 
@@ -22,20 +17,17 @@ NukeJS version micro is framework run in Javascript and currently only support f
 
 - Rules:
     - To start a Nuke page you need use like this:
-        ![image description](page-full.JPG)
+        ![image description](page.JPG)
     - To print any things:
         - You need type ` Nuk{yourVariable}`
         - To include an compoent you need create new a component with name is uppercase letter. Example include component:
             - ` <EXAMPLECOMPONENT> <span>Hello </span> Nuk{yourVariable} </EXAMPLECOMPONENT> `
     - Again I remember to you component name always will be uppercase letter. And don't use any `functions` on `<NukApp>`, it's only component. So If I need call API before load UI for component? How we do it? Very easy, you have seen you compoent function our have a space before return `<NukApp>`. Do a something in that. Of course if has any events in compoent you can use `ComponentRender` to rerender again for that component.
-    - In case you need use data for component, so let's try use ` params="nukepage.status" `. Example: `<EXAMPLECOMPONENT params="nukepage.status"> Your point Nuk{componentParam.point} </EXAMPLECOMPONENT>`:
+    - In case you need use data for component, so let's try use ` params="$NukPage.status" `. Example: `<EXAMPLECOMPONENT params="$NukPage.status"> Your point Nuk{componentParam.point} </EXAMPLECOMPONENT>`:
         ![image description](cpn.JPG)
-    - `registerCallback` => only use for SGP 
+    - In NukeJS version micro our need use a function support for action callback on components: `Nuke.registerCallback(key,callback)`. In this case text of param Key will automatic uppercase letter. Let's consider in `ButtonComponent` of example source code.
 - Lifecycle 
-    - ![image description](nukejs-lifecycle.JPG)
-
-- Routers:
-    - To config a new router, pls go to `./src/router.nuk.js`. Don't forget: we using `$id` for config params. Example you need a params `slug` for detail your post in URL.
+    - Waiting for update
 
 - Assets
     - scss 
@@ -43,9 +35,9 @@ NukeJS version micro is framework run in Javascript and currently only support f
     - image 
         - to import image file you need type `require('./your-image.png')`. Example `<img src="Nuk{require('../assets/your-image.png')}"/>`;
 
+
 - Manage status
-    - Only use for SGP: `setStatus`
+    - To update and render page again use `Nuke.setStatus(key,value)`. You can set value be any type : `object,string,number,function`.
+    - Remember: Don't forget define your status before `setStatus`.
 - Render 
-    - `Nuke.ComponentRender(root_id,NukeElement)`: Only use for SGP
-    - You can recall render while you need render again.
-    
+    - render only at a div or a component use: `Nuke.ComponentRender(root_id,NukeElement)`. Mean is only render at element has that id.

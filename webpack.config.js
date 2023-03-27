@@ -4,7 +4,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const package = require('./package.json');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -13,7 +12,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 
 const config = {
-    entry: package.pages,
+    entry: __dirname + '/src/index.nuk.js',
     output: {
         path: path.resolve(__dirname, 'dist')
     },
@@ -28,6 +27,10 @@ const config = {
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+        new HtmlWebpackPlugin({
+            template:"index.html",
+            publicPath : '/'
+        })
     ],
     module: {
         rules: [
@@ -68,22 +71,6 @@ module.exports = () => {
     } else {
         config.mode = 'development';
     }
-    Object.keys(package.pages).forEach((key,index) => {
-        excludeChunks = [];
-        const pages = JSON.parse(JSON.stringify(package.pages));
-        delete pages[key];
-        Object.keys(pages).forEach((key2,index) => {
-            excludeChunks.push(key2)
-        })
-        config.plugins.push(new HtmlWebpackPlugin({
-            template:"index.html",
-            filename: `${key}.html`,
-            inject : true,
-            chunks :  "all",
-            excludeChunks: excludeChunks,
-            publicPath : '/'
-        }));
-    });
 
     return config;
 };
