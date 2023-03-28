@@ -21,8 +21,10 @@ NukeJS version micro is framework run in Javascript and currently only support f
 ## Structure 
 
 - Rules:
-    - To start a Nuke page you need use like this:
+    - To start a Nuke page with full options you need use like this:
         ![image description](page-full.JPG)
+    - To start a Nuke page with SGP you need use like this:
+        ![image description](page.JPG). If you need more information for SGP then pls consider structure beta 1.1.
     - To print any things:
         - You need type ` Nuk{yourVariable}`
         - To include an compoent you need create new a component with name is uppercase letter. Example include component:
@@ -32,7 +34,7 @@ NukeJS version micro is framework run in Javascript and currently only support f
         ![image description](cpn.JPG)
     - `registerCallback` => only use for SGP 
 - Lifecycle 
-    - ![image description](nukejs-lifecycle.JPG)
+    - ![image description](nukeJS-lifecycle.JPG)
 
 - Routers:
     - To config a new router, pls go to `./src/router.nuk.js`. Don't forget: we using `$id` for config params. Example you need a params `slug` for detail your post in URL.
