@@ -35,7 +35,7 @@ NukeJS version micro is framework run in Javascript and currently only support f
         ![image description](cpn.JPG)
     - `registerCallback` => only use for SGP 
 - Lifecycle 
-    - ![image description](nukeJS-lifecycle.JPG)
+    - ![image description](nukeJS-lifecycle.jpg)
 
 - Routers:
     - To config a new router, pls go to `./src/router.nuk.js`. Don't forget: we using `$id` for config params. Example you need a params `slug` for detail your post in URL.
