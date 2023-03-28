@@ -36,7 +36,7 @@ NukeJS version micro is framework run in Javascript and currently only support f
         ![image description](cpn.JPG)
     - `registerCallback` => only use for SGP 
 - Lifecycle 
-    - Because version greater than 1.2 will extends structure of NukeJS cross platforms ( Typescript ) . So it's like aboyt LifeCycle. 
+    - Because version greater than 1.2 will extends structure of NukeJS cross platforms ( Typescript ) . So it's like about LifeCycle. 
     - ![image description](nukeJS-lifecycle.jpg)
 
 - Routers:
