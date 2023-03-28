@@ -24,7 +24,8 @@ NukeJS version micro is framework run in Javascript and currently only support f
     - To start a Nuke page with full options you need use like this:
         ![image description](page-full.JPG)
     - To start a Nuke page with SGP you need use like this:
-        ![image description](page.JPG). If you need more information for SGP then pls consider structure beta 1.1.
+        ![image description](page.JPG). 
+        If you need more information for SGP then pls consider structure beta 1.1.
     - To print any things:
         - You need type ` Nuk{yourVariable}`
         - To include an compoent you need create new a component with name is uppercase letter. Example include component:
