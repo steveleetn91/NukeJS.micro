@@ -25,7 +25,7 @@ NukeJS version micro is framework run in Javascript and currently only support f
         ![image description](page-full.JPG)
     - To start a Nuke page with SGP you need use like this:
         ![image description](page.JPG). 
-        
+
         If you need more information for SGP then pls consider structure beta 1.1.
     - To print any things:
         - You need type ` Nuk{yourVariable}`
@@ -36,6 +36,7 @@ NukeJS version micro is framework run in Javascript and currently only support f
         ![image description](cpn.JPG)
     - `registerCallback` => only use for SGP 
 - Lifecycle 
+    - Because version greater than 1.2 will extends structure of NukeJS cross platforms ( Typescript ) . So it's like aboyt LifeCycle. 
     - ![image description](nukeJS-lifecycle.jpg)
 
 - Routers:
