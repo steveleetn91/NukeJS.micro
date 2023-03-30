@@ -5,27 +5,26 @@ import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
 import NukeJSRoute from "nukejs-router/dist/libs/NukeJSRoute";
+import NukeJSCore from "nukejscore";
 export default class Index {
     constructor() {
-        this.status = {
-            count: 0,
-            isSubmit: false
-        }
         this.route = new NukeJSRoute();
+        this.core = new NukeJSCore();
+        this.status = {
+            count: this.core.hooks.useState("INDEXCOUNT",0)
+        }
     }
     beforeRender() {
-        console.log('this.route',this.route);
+        console.log('this.route', this.route);
     }
     afterRender() {
 
     }
     submit() {
-        this.status.count = Number(this.status.count);
-        this.status.count++;
-        this.render();
+        nukepage.status.count.set(Number(nukepage.status.count.get()) + 1);
     }
-    redirect(url = ""){
-        return window.history.pushState({},"",url);
+    redirect(url = "") {
+        return window.history.pushState({}, "", url);
     }
     render() {
         const _ = () => {
@@ -34,11 +33,11 @@ export default class Index {
                     <div id="pointComponent-text"
                         class="pointComponent-text">
                         <POINTCOMPONENT>
-                            <span style="color:red">Nuk{this.status.count
-                                >= 10 ? this.status.count : '0' + this.status.count}</span>
+                            <span style="color:red">Nuk{Number(this.status.count.get())
+                                >= 10 ? this.status.count.get() : '0' + this.status.count.get()}</span>
                         </POINTCOMPONENT>
                     </div>
-                    <BUTTONCOMPONENT params="nukepage.submit">+ 1 Point</BUTTONCOMPONENT>
+                    <BUTTONCOMPONENT params="this.submit">+ 1 Point</BUTTONCOMPONENT>
                     <div class="test-component"><TESTCOMPONENT params="this.status">
                         <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
                     </TESTCOMPONENT></div>
@@ -51,6 +50,6 @@ export default class Index {
                 </DEFAULTLAYOUT>
             </NukApp>
         }
-        document.getElementById("root").innerHTML = _();
+        this.core.doom.build("root", _());
     }
 }

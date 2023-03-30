@@ -4,26 +4,27 @@ import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
-export default class Home {
+import NukeJSRoute from "nukejs-router/dist/libs/NukeJSRoute";
+import NukeJSCore from "nukejscore";
+export default class Index {
     constructor() {
+        this.core = new NukeJSCore();
         this.status = {
-            count: 0,
-            isSubmit: false
+            count: this.core.hooks.useState("HOMECOUNT",0)
         }
+        this.route = new NukeJSRoute();
     }
     beforeRender() {
-
+        console.log('this.route', this.route);
     }
     afterRender() {
 
     }
     submit() {
-        this.status.count = Number(this.status.count);
-        this.status.count++;
-        this.render();
+        nukepage.status.count.set(Number(nukepage.status.count.get()) + 1);
     }
-    redirect(url = ""){
-        return window.history.pushState({},"",url);
+    redirect(url = "") {
+        return window.history.pushState({}, "", url);
     }
     render() {
         const _ = () => {
@@ -32,8 +33,8 @@ export default class Home {
                     <div id="pointComponent-text"
                         class="pointComponent-text">
                         <POINTCOMPONENT>
-                            <span style="color:red">Nuk{this.status.count
-                                >= 10 ? this.status.count : '0' + this.status.count}</span>
+                            <span style="color:red">Nuk{Number(this.status.count.get())
+                                >= 10 ? this.status.count.get() : '0' + this.status.count.get()}</span>
                         </POINTCOMPONENT>
                     </div>
                     <BUTTONCOMPONENT params="this.submit">+ 1 Point</BUTTONCOMPONENT>
@@ -45,10 +46,10 @@ export default class Home {
                         <span>Like fanpage to get new information</span>
                     </FANPAGECOMPONENT>
                     <hr />
-                    <a click="nukepage.redirect('/')"> >> Go to index</a>
+                    <a click="nukepage.redirect('/')"> >> Go to home</a>
                 </DEFAULTLAYOUT>
             </NukApp>
         }
-        document.getElementById("root").innerHTML = _();
+        this.core.doom.build("root", _());
     }
 }

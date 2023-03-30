@@ -33,7 +33,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "nukejs-loader": "^1.0.32",
-    "nukejs-router": "^1.1.15"
+    "nukejs-router": "^1.1.15",
+    "nukejscore": "^1.0.15"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",

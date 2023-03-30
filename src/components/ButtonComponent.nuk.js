@@ -1,6 +1,8 @@
+import NukeJSCore from "nukejscore"
+
 export default function BUTTONCOMPONENT(data,callback) {
-    nukepage.BUTTONCOMPONENT_CLICK = callback;
+    const nukejsCore = new NukeJSCore;
     return <NukApp>
-        <button click="nukepage.BUTTONCOMPONENT_CLICK()">Nuk{data}</button>
+        <button click="Nuk{nukejsCore.clientCallback.create(callback)}">Nuk{data}</button>
     </NukApp>
 }

@@ -1,16 +1,10 @@
-import TESTCOMPONENT from "../components/TestComponent.nuk";
 import "../../assets/global.scss";
-import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
-import POINTCOMPONENT from "../components/PointComponent.nuk";
-import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
 import NukeJSRoute from "nukejs-router/dist/libs/NukeJSRoute";
+import NukeJSCore from "nukejscore";
 export default class Index {
     constructor() {
-        this.status = {
-            count: 0,
-            isSubmit: false
-        }
+        this.core = new NukeJSCore();
         this.route = new NukeJSRoute();
     }
     beforeRender() {
@@ -37,6 +31,6 @@ export default class Index {
                 </DEFAULTLAYOUT>
             </NukApp>
         }
-        document.getElementById("root").innerHTML = _();
+        this.core.doom.build("root", _());
     }
 }
