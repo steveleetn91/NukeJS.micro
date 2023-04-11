@@ -16,7 +16,7 @@ npm run serve
 ```
 to dev serve of your application
 
-Document: `https://github.com/steveleetn91/NukeJS.micro/tree/beta/document/README.md`
+Document: `https://github.com/steveleetn91/NukeJS.micro/tree/beta/document`
 
 
 Consider NukeJS ( Cross platform ) : `https://github.com/steveleetn91/NukeJS`
