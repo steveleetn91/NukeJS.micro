@@ -12,7 +12,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 
 const config = {
-    entry: __dirname + '/src/index.nuk.js',
+    entry: __dirname + '/src/index.nuk',
     output: {
         path: path.resolve(__dirname, 'dist')
     },
@@ -35,11 +35,11 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(nuk.js)$/i,
+                test: /\.(nuk)$/i,
                 loader: 'babel-loader',
             },
             {
-                test: /\.(nuk.js)$/i,
+                test: /\.(nuk)$/i,
                 use: 'nukejs-loader',
             },
             {

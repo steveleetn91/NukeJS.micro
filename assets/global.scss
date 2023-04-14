@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-$themeColor: cornflowerblue;
+$themeColor: #4e5050;
 body {
     hr {
         background-color: #f3eeee45!important;
@@ -7,7 +7,7 @@ body {
         box-shadow: 3px 3px 3px #f3eeee45;
     }
     code {
-        color: cornflowerblue
+        color: $themeColor
     }
     font-family: 'Roboto', sans-serif;
     .content-box {

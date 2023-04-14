@@ -46,7 +46,7 @@ export default class Index {
                         <span>Like fanpage to get new information</span>
                     </FANPAGECOMPONENT>
                     <hr />
-                    <a click="nukepage.redirect('/')"> >> Go to home</a>
+                    <a click="nukepage.redirect('/')"> >> Go to index</a>
                 </DEFAULTLAYOUT>
             </NukApp>
         }
