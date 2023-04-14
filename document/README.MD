@@ -7,6 +7,10 @@ NukeJS version micro is framework run in Javascript and currently only support f
     + Multi page application
     + Easy implment for framework MVC as : Laravel, Spring Boot, CakePHP, ExpressJS ...etc
 
+## VSCode Plugin
+
+At version 1.2 our changed file to `.nuk`. So you need a plugin support for it `https://marketplace.visualstudio.com/items?itemName=nukejs.nukejs&ssr=false#overview`.
+
 ## How to install? 
 
 - First step: 
