@@ -1,3 +1,4 @@
+42
 import TESTCOMPONENT from "../components/TestComponent.nuk";
 import "../../assets/global.scss";
 import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
@@ -15,7 +16,7 @@ export default class Index {
         }
     }
     beforeRender() {
-        console.log('this.route', this.route);
+            console.log('this.route', this.route);
     }
     afterRender() {
 
