@@ -29,6 +29,7 @@ export default class Index {
     }
     render() {
         const _ = () => {
+            let test = <EmptyBox><span></span></EmptyBox>
             return <NukApp>
                 <DEFAULTLAYOUT>
                     <div id="pointComponent-text"
@@ -48,6 +49,7 @@ export default class Index {
                     </FANPAGECOMPONENT>
                     <hr />
                     <a click="nukepage.redirect('/home')"> >> Go to home</a>
+                    Nuk{test}
                 </DEFAULTLAYOUT>
             </NukApp>
         }
