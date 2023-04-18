@@ -6,6 +6,7 @@ import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
 import NukeJSRoute from "nukejs-router/dist/libs/NukeJSRoute";
 import NukeJSCore from "nukejscore";
+import {FANPAGECOMPONENT} from "../components/FanpageComponent.nuk"
 export default class Index {
     constructor() {
         this.route = new NukeJSRoute();
