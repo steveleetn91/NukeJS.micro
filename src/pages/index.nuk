@@ -1,7 +1,6 @@
 42
 import TESTCOMPONENT from "../components/TestComponent.nuk";
 import "../../assets/global.scss";
-import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";
@@ -29,7 +28,6 @@ export default class Index {
     }
     render() {
         const _ = () => {
-            let test = <EmptyBox><span></span></EmptyBox>
             return <NukApp>
                 <DEFAULTLAYOUT>
                     <div id="pointComponent-text"
@@ -49,7 +47,6 @@ export default class Index {
                     </FANPAGECOMPONENT>
                     <hr />
                     <a click="nukepage.redirect('/home')"> >> Go to home</a>
-                    Nuk{test}
                 </DEFAULTLAYOUT>
             </NukApp>
         }
