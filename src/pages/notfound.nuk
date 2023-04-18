@@ -18,16 +18,13 @@ export default class Index {
         this.status.count++;
         this.render();
     }
-    redirect(url = ""){
-        return window.history.pushState({},"",url);
-    }
     render() {
         const _ = () => {
             return <NukApp>
                 <DEFAULTLAYOUT>
                     <h1>Not found page</h1>
                     <hr />
-                    <a click="nukepage.redirect('/home')"> >> Go to home</a>
+                    <a click="/home"> >> Go to home</a>
                 </DEFAULTLAYOUT>
             </NukApp>
         }

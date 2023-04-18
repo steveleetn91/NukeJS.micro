@@ -24,9 +24,6 @@ export default class Index {
     submit() {
         nukepage.status.count.set(Number(nukepage.status.count.get()) + 1);
     }
-    redirect(url = "") {
-        return window.history.pushState({}, "", url);
-    }
     render() {
         const _ = () => {
             return <NukApp>
@@ -47,7 +44,7 @@ export default class Index {
                         <span>Like fanpage to get new information</span>
                     </FANPAGECOMPONENT>
                     <hr />
-                    <a click="nukepage.redirect('/home')"> >> Go to home</a>
+                    <a link="/home"> >> Go to home</a>
                 </DEFAULTLAYOUT>
             </NukApp>
         }
