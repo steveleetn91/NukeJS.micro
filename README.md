@@ -1,22 +1,19 @@
 # 🚀 Welcome to NUKEJS - VERSION MICRO!
 
-This is a project about Framework for Frontend. This only a framework for web in now. But may be will be cross platforms in future.
+## Introduction 
 
-![image description](document/Capture.JPG)
+This is a framework in Javascript, It will help you build Frontend for web and software. Nuke Company investing and looking for investor for new plan and service. Currently NukeJS.micro is first Frontend Framework of Viet Nam. NukeJS.micro will help you build your Frontend solid and grow fast. 
 
-```
-npm run build
-```
-to bundle your application
+The NukeJS is a Open Source, so it will always free forever.
 
-OR
+## Document 
 
-```
-npm run serve
-```
-to dev serve of your application
+Document: `http://document.nuke.com.vn`
 
-Document: `https://github.com/steveleetn91/NukeJS.micro/tree/beta/document`
+## We will donate
 
+We will donate for members working for Nuke as create plugin NukeJS, write document.
+
+## Cross platforms ( Typescript )  
 
 Consider NukeJS ( Cross platform ) : `https://github.com/steveleetn91/NukeJS`
