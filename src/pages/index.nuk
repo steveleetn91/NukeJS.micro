@@ -1,6 +1,5 @@
 42
 import TESTCOMPONENT from "../components/TestComponent.nuk";
-import "../../assets/global.scss";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
 import DEFAULTLAYOUT from "../layouts/DefaultLayout.nuk";

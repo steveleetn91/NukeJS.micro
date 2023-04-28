@@ -1,3 +1,4 @@
+import "../assets/global.scss";
 import NukeJSRouter from "nukejs-router/dist/libs/NukeJSRouter";
 import Router from "./routers/router.nuk";
 const ModuleConfig = new NukeJSRouter();

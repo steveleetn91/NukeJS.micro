@@ -1,5 +1,4 @@
 import TESTCOMPONENT from "../components/TestComponent.nuk";
-import "../../assets/global.scss";
 import { FANPAGECOMPONENT } from "../components/FanpageComponent.nuk";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
