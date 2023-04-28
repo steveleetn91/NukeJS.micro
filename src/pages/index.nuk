@@ -1,4 +1,3 @@
-42
 import TESTCOMPONENT from "../components/TestComponent.nuk";
 import POINTCOMPONENT from "../components/PointComponent.nuk";
 import BUTTONCOMPONENT from "../components/ButtonComponent.nuk"
