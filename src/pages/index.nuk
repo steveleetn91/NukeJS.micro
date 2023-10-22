@@ -10,7 +10,7 @@ export default class Index {
         this.route = new NukeJSRoute();
         this.core = new NukeJSCore();
         this.status = {
-            count: this.core.hooks.useState("INDEXCOUNT",0)
+            count: this.core.hooks.useState("INDEXCOUNT",0,false)
         }
     }
     beforeRender() {
@@ -33,8 +33,8 @@ export default class Index {
                                 >= 10 ? this.status.count.get() : '0' + this.status.count.get()}</span>
                         </POINTCOMPONENT>
                     </div>
-                    <BUTTONCOMPONENT params="this.submit">+ 1 Point</BUTTONCOMPONENT>
-                    <div class="test-component"><TESTCOMPONENT params="this.status">
+                    <BUTTONCOMPONENT params={ this.submit } >+ 1 Point</BUTTONCOMPONENT>
+                    <div class="test-component"><TESTCOMPONENT params={this.status}>
                         <span>Hello guys. I'm Test Component, you can seen me at <code>./src/components/TestComponent.nuk.js</code></span>
                     </TESTCOMPONENT></div>
                     <hr />
