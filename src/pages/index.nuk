@@ -10,7 +10,7 @@ export default class Index {
         this.route = new NukeJSRoute();
         this.core = new NukeJSCore();
         this.status = {
-            count: this.core.hooks.useState("INDEXCOUNT",0,false)
+            count: this.core.hooks.useState("INDEXCOUNT",0)
         }
     }
     beforeRender() {
